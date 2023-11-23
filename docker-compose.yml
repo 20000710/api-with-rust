@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     environment:
       - POSTGRES_USER=postgres
-      - POSGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres=app_db
     command: ['postgres', '-c', 'log_statement=all']
 
@@ -17,6 +17,6 @@ services:
     environment:
       - DATABASE_URL=postgres://postgres:postgres@postgres/app_db
     ports:
-      - '8000:8000'
+      - 8000:8000
     volumes:
-      - ./:app
+      - ./:/app

@@ -1,6 +1,6 @@
 FROM rust:latest
 
-WORKDIR /app
+WORKDIR /app/
 
 COPY . .
 
